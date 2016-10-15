@@ -15,6 +15,11 @@
         * @type {Object}
         */
         var currentBuzzObject = null;
+        /**
+        * @desc holds the value of the volume
+        * @type {number}
+        */
+        var volume = 0;
         
         /**
         * @function setSong
@@ -139,6 +144,14 @@
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
             }
+        };
+
+        /**
+        * @function setVolume
+        * @desc updates the volume on change
+        */
+        SongPlayer.setVolume = function() {
+            currentBuzzObject.setVolume(volume);
         };
 
         return SongPlayer;
